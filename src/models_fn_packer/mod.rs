@@ -1,5 +1,11 @@
-pub mod battery_helper;
-pub mod sys_info_helper;
+mod battery_helper;
+mod sys_info_helper;
+
+pub use battery_helper::get_battery_brief_info;
+pub use sys_info_helper::get_cpu_brief_info;
+pub use sys_info_helper::get_cpu_brief_info_with_1_ms_sleep;
+pub use sys_info_helper::get_memory_brief_info;
+pub use sys_info_helper::get_processes_brief_info;
 
 #[cfg(test)]
 mod tests {
